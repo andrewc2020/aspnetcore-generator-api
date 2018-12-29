@@ -14,6 +14,5 @@ namespace api.Controllers
             => Count.Times(i => generateItem())
              .OrderBy(n => Sort ? n : default(TItem));
              
-             
     }
 }
