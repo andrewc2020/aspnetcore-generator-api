@@ -22,7 +22,7 @@ namespace tests
             var values = new[]{'a','b','c'};
             var counter = 0;
             var generated = range.Of(() => values[counter++]);
-            Assert.Equal(new []{'a','c','b'}, generated.ToArray());
+            Assert.Equal(new []{'a','b','c'}, generated.ToArray());
         }
     }
 }
