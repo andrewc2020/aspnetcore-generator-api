@@ -1,0 +1,19 @@
+version: '3.1'
+
+services:
+  generator:
+    image: andrewc2020/gen:ci30
+    #ports:
+      #- "8080:80"
+  mail:
+    image: mailhog/mailhog
+    #ports:
+     # - "8025:8025"
+
+  integration:
+    image: andrewc2020/gen:integration-30
+    build: .
+
+
+  
+      
