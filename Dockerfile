@@ -10,6 +10,9 @@ RUN dotnet restore api/api.csproj
 COPY tests/tests.csproj ./tests/
 RUN dotnet restore tests/tests.csproj
 
+COPY nunitTests/nunitTests.csproj ./nunitTests/
+RUN dotnet restore nunitTests/nunitTests.csproj
+
 
 #copy src
 COPY . .
@@ -17,6 +20,7 @@ COPY . .
 #test
 ENV TEAMCITY_PROJECT_NAME=fake
 RUN dotnet test tests/tests.csproj
+RUN dotnet test nunitTests/nunitTests.csproj
 
 #publish
 
