@@ -7,7 +7,7 @@ services:
     image: aspnetcore/generator:multi
     ports:
       - "8080:80"
-    environment:
+    kenvironment:
           TEAMCITY_PROJECT_NAME: null
 
   mail:
