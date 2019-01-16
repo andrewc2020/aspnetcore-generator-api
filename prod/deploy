@@ -1,0 +1,10 @@
+#!/bin/bash
+
+
+# login with a service principal
+az login --service-principal -u $1 -p $2 -t $3
+
+
+
+# deploy yaml
+kubectl apply -f gen.yaml

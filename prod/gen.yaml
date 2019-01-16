@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: generator
-        image: andrewc2020/gen:ci37
+        image: andrewc2020/gen:ci${GENERATOR_BUILD_NUMBER-37}
         resources:
           requests:
             cpu: 100m
