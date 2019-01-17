@@ -4,6 +4,7 @@
 # login with a service principal
 az login --service-principal -u $1 -p $2 -t $3
 
+#az aks get-credentials --overwrite-existing --resource-group myResourceGroup --name mycluster
 
 # deploy yaml
 kubectl apply -f ./gen.yaml
